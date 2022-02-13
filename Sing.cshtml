@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    var message = "";
+    var num = Int16.Parse(@Context.Session.GetString("bottles"));
+    if ( num < 101 && num > 49)
+    {
+        for (int i = num; i > 1; i--)
+        {
+            var num2 = i - 1;
+            message += i + " green bottle hanging on the wall, " + i + " green bottle hanging on the wall, And if one green bottle should accidentally fall, There'll be "+ num2 +" green bottle hanging on the wall.";   
+        }
+        message += "1 green bottle hanging on the wall, 1 green bottle hanging on the wall, And if one green bottle should accidentally fall,There'll be no green bottle hanging on the wall. There is no green bottle standing on the wall.";
+    }
+    else
+    {
+        message += "Enter a number between 50 and 100";
+    }
+}
+<tr>
+    <td>
+        @message
+    </td>
+</tr>
+
+
+

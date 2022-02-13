@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewData["Title"]</title>
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>Welcome!</h1>
+            <h3>Doug Trombley @ViewBag.title<h3/>
+            <br />
+            <br />
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("Persons", "CreatePerson", "Home")
+            @Html.ActionLink("Show Song", "SongForm", "Home")<br /><br />
+        </header>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <footer>
+            Layout sets a standard layout for all pages with a mutable body. I've put the css file in root directory so it is accessible at all levels. I've out the Layout file in a shared folder of views after seein thats how it was done in the example project.
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "SongForm";
+}
+
+<h3>"SongForm"</h3>
+<form asp-controller="Home" asp-action="Sing" method="post">
+    <table>
+        <tr>
+            <td>Enter the number of bottles between 50 and 100:</td>
+            <td><input type="number" name="bottles" /></td>
+        </tr>
+    </table>
+    <input type="submit" />
+</form>
